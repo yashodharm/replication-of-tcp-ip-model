@@ -5,15 +5,15 @@ from middleware.physical_layer import manchdecode
 from middleware.error import *            
   
 s = socket.socket()          
-print "server side Socket successfully created"
+print "Server Side Socket successfully created"
   
 port = 12347                
  
 s.bind(('', port))         
-print "socket binded to %s" %(port) 
+print "Socket is binded to %s" %(port) 
   
 s.listen(5)      
-print "socket is listening"            
+print "Socket is listening"            
   
 while True: 
   
@@ -30,9 +30,9 @@ while True:
    if check==1:
    		d=d[1:]
    else:
-   		print("the error is found")
+   		print("The error is found")
    print(d)
    d=bits_string(d)
-   print("the output we recived on other end is " + d)
+   print("the output received on other end is " + d)
 
    break
