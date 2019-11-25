@@ -5,20 +5,20 @@ from middleware.physical_layer import manchdecode
 from middleware.error import *            
   
 s = socket.socket()          
-print "Server Side Socket successfully created"
+print("Server Side Socket successfully created")
   
 port = 12347                
  
 s.bind(('', port))         
-print "Socket is binded to %s" %(port) 
+print("Socket is binded to" +(port))
   
 s.listen(5)      
-print "Socket is listening"            
+print("Socket is listening")          
   
 while True: 
   
    c, addr = s.accept()      
-   print 'Got connection from', addr 
+   print("Got connection from"+ addr) 
   
    c.send('Thank you for connecting') 
    data=c.recv(1024)
